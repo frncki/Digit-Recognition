@@ -11,8 +11,8 @@ class Grid {
 
     int[] getGrid() {
         for (int i = 0; i < inputGrid.length; i++) {
-            if (inputGrid[i].equals("_")) grid[i] = 0;
-            else if (inputGrid[i].equals("X")) grid[i] = 1;
+            if (inputGrid[i].equals("X")) grid[i] = 1;
+            else grid[i] = 0;
         }
         return grid;
     }

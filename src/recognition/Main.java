@@ -1,17 +1,28 @@
 package recognition;
+
 import java.util.*;
 
 public class Main {
 
 
     public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
 
-       Grid grid = new Grid("XXXX_XXXX");
+        String firstLine = scanner.nextLine();
+        String secondLine = scanner.nextLine();
+        String thirdLine = scanner.nextLine();
 
-       int[] valueGrid = grid.getGrid();
-       int output = evaluateOutput(valueGrid);
-       if (output > 0) System.out.println("This number is 0");
-       else if (output < 0) System.out.println("This number is 1");
+        System.out.println("The input is:");
+        System.out.println(firstLine);
+        System.out.println(secondLine);
+        System.out.println(thirdLine);
+
+        Grid grid = new Grid(firstLine + secondLine + thirdLine);
+
+        int[] valueGrid = grid.getGrid();
+        int output = evaluateOutput(valueGrid);
+        if (output > 0) System.out.println("This number is 0");
+        else if (output < 0) System.out.println("This number is 1");
     }
 
     private static int evaluateOutput(int[] inputGrid) {

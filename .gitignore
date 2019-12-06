@@ -3,4 +3,6 @@ out/
 
 test/
 
+.DS_Store
+
 build/

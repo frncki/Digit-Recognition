@@ -2,7 +2,7 @@ package recognition;
 
 import java.util.*;
 
-public class Main {
+public class Stage1 {
 
 
     public static void main(String[] args) {
@@ -17,7 +17,7 @@ public class Main {
         System.out.println(secondLine);
         System.out.println(thirdLine);
 
-        Grid grid = new Grid(firstLine + secondLine + thirdLine);
+        Grid grid = new Grid(3 ,3,firstLine + secondLine + thirdLine);
 
         int[] valueGrid = grid.getGrid();
         int output = evaluateOutput(valueGrid);

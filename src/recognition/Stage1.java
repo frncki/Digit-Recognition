@@ -17,7 +17,7 @@ public class Stage1 {
         System.out.println(secondLine);
         System.out.println(thirdLine);
 
-        Grid grid = new Grid(3 ,3,firstLine + secondLine + thirdLine);
+        Grid grid = new Grid(firstLine + secondLine + thirdLine);
 
         int[] valueGrid = grid.getGrid();
         int output = evaluateOutput(valueGrid);

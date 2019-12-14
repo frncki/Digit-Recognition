@@ -15,17 +15,19 @@ public class NeuralNetwork {
     }
 
     int evaluate() {
-        int output = -100000000;
+        int maxOutcome = -100000000;
+        int output = 0;
         for (int i = 0; i < outputNeurons.length; i++) {
             for (int j = 0; j < inputNeurons.length; j++) {
-                outputNeurons[i] += (inputNeurons[i] * weights[i][j]);
+                outputNeurons[i] += (inputNeurons[j] * weights[i][j]);
             }
             outputNeurons[i] += biases[i];
-            if(outputNeurons[i] > output){
-                output = outputNeurons[i];
+            if(outputNeurons[i] > maxOutcome){
+                maxOutcome = outputNeurons[i];
+                output = i;
             }
         }
-
-        return output;
+        output++;
+        return (output == 10) ? 0 : output;
     }
 }
